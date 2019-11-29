@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="1.777903">
+    <testcase classname="1. POST test scenarios" name="1- POST request to add the product" time="1.388554">
+        <system-out>
+            <![CDATA[Given service is running....................................................passed
+When "MAC","MACBOOK","2000","100","String","Work Macbook","APPLE","APPLE","String","String" information entered.passed
+Then the post request response send with "products".........................passed
+And the matching service returns a "201"....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="1. POST test scenarios" name="2- GET request to capture the product" time="0.389349">
+        <failure message="java.lang.AssertionError: expected:&lt;9999703&gt; but was:&lt;null&gt;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.failNotEquals(Assert.java:834)&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:118)&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#10;&#9;at Steps.Steps.capture_new_generated_id_with_get_something(Steps.java:82)&#10;&#9;at ✽.Then capture new generated id with get &quot;products&quot;(PostRequest.feature:18)&#10;">
+            <![CDATA[Given service is running....................................................passed
+When "MAC","MACBOOK","2000","100","String","Work Macbook","APPLE","APPLE","String","String" information entered.passed
+Then capture new generated id with get "products"...........................failed
+And the matching service returns a "200"....................................skipped
+
+StackTrace:
+java.lang.AssertionError: expected:<9999703> but was:<null>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at Steps.Steps.capture_new_generated_id_with_get_something(Steps.java:82)
+	at ✽.Then capture new generated id with get "products"(PostRequest.feature:18)
+]]>
+        </failure>
+    </testcase>
+</testsuite>
